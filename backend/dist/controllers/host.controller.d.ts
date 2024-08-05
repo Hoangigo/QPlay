@@ -1,0 +1,11 @@
+import { Request, Response } from "express";
+export declare const getExistingHost: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const createNewHost: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const verifyEmailConfirmation: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const resetRequestHostPassword: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const confirmResetPasswordToken: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const resetHostPassword: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const getHostByEmail: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const deleteHost: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const updateHost: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+export declare const changeHostPassword: (req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>;

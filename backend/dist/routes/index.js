@@ -1,0 +1,31 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const host_route_1 = __importDefault(require("./host.route"));
+const spotify_route_1 = __importDefault(require("./spotify.route"));
+const auth_route_1 = __importDefault(require("./auth.route"));
+const suggestion_route_1 = __importDefault(require("./suggestion.route"));
+const voteactivity_route_1 = __importDefault(require("./voteactivity.route"));
+const auctionactivity_route_1 = __importDefault(require("./auctionactivity.route"));
+const bet_route_1 = __importDefault(require("./bet.route"));
+const voteoption_route_1 = __importDefault(require("./voteoption.route"));
+const paypal_route_1 = __importDefault(require("./paypal.route"));
+const event_route_1 = __importDefault(require("./event.route"));
+const openstreetmap_route_1 = __importDefault(require("./openstreetmap.route"));
+const router = express_1.default.Router({ mergeParams: true });
+// define routes
+router.use("/host", host_route_1.default);
+router.use("/spotify", spotify_route_1.default);
+router.use("/auth", auth_route_1.default);
+router.use("/suggestion", suggestion_route_1.default);
+router.use("/vote", voteactivity_route_1.default);
+router.use("/auction", auctionactivity_route_1.default);
+router.use("/bet", bet_route_1.default);
+router.use("/voteoption", voteoption_route_1.default);
+router.use("/event", event_route_1.default);
+router.use("/paypal", paypal_route_1.default);
+router.use("/openstreetmap", openstreetmap_route_1.default);
+exports.default = router;
